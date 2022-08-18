@@ -27,9 +27,11 @@ class MaterialTest {
 
         Material listMaterial[] = {flour1, flour2, flour3, flour4, flour5, meat1, meat2, meat3, meat4, meat5};
         showList(listMaterial);
+        System.out.println();
 
         Material flour6 = new CrispyFlour("04", "Bột chiên xù", LocalDate.of(2020, 10, 22), 31000, 0.82);
         showList(addList(listMaterial, 5, flour6));
+        System.out.println();
         showList(removeList(listMaterial, 5));
 
     }

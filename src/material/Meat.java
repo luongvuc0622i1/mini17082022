@@ -26,7 +26,12 @@ public class Meat extends Material implements Discount {
 
     @Override
     public double getRealMoney() {
-        return 0;
+        double calculatorDays = LocalDate.now().compareTo(getManufacturingDate());
+        if (calculatorDays < 5) {
+            return getAmount()*90/100;
+        } else {
+            return getAmount()*70/100;
+        }
     }
 
     @Override
